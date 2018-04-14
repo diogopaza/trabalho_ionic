@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+  
+
+
+  <ion-item>
+    <button ion-button  (click)="carregarListaCarros()">Listar Carros</button>
+  </ion-item>
+  <ion-list>
+    <button ion-item *ngFor="let item of lista; let i = index" (click)="excluirItem(i)">
+      {{ "Codigo: " + item.codigo }}
+      
+      {{ "Marca " + item.nome }}
+     
+    </button>
+  </ion-list>
+
+
+
+
+</ion-content>
